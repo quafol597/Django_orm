@@ -1,16 +1,25 @@
 """
 settings.py文件主要用于配置数据库
 """
+# ======================这是固定的配置==============================
+INSTALLED_APPS = [
+    'app',
+]
+SECRET_KEY = 'replace_me'
+# =================================================================
+
+# 下面为链接不同数据库的配置
+
 # test_seco
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'seco',
-#         'USER': 'postgres',
-#         'PASSWORD': 'xiaoan123',
-#         'HOST': '10.10.0.197',
-#         'PORT': 5432,
-#         'OPTIONS': {'options': '-c search_path=seco'},  # 连接PG数据库指定模式 - seco
+#         'NAME': 'seco',  # 数据库
+#         'USER': 'postgres',  # 用户
+#         'PASSWORD': 'xiaoan123',  # 密码
+#         'HOST': '10.10.0.197',  # IP
+#         'PORT': 5432,  # PORT
+#         'OPTIONS': {'options': '-c search_path=seco'},  # Schema
 #     }
 # }
 
@@ -19,18 +28,11 @@ settings.py文件主要用于配置数据库
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'demo',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '8.129.49.94',
-        'PORT': 5432,
-        'OPTIONS': {'options': '-c search_path=orm'},
+        'NAME': 'demo',  # 数据库
+        'USER': 'postgres',  # 用户
+        'PASSWORD': 'postgres',  # 密码
+        'HOST': '8.129.49.94',  # IP
+        'PORT': 5432,  # PORT
+        'OPTIONS': {'options': '-c search_path=orm'},  # Schema
     }
 }
-
-
-# 这两个配置不需要修改
-INSTALLED_APPS = [
-    'app',
-]
-SECRET_KEY = 'replace_me'

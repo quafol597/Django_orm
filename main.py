@@ -10,13 +10,9 @@ application = get_wsgi_application()
 from app.models import *
 # =================================================================
 
-
+# main函数用于编写数据库CURD
 def main():
-    item = TestModels.objects.create(
-        name='xiaohong',
-        age=18
-    )
-    print(item)
+    pass
 
 
 if __name__ == '__main__':
